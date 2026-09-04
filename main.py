@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env python
-
-def main()
-    pass
-=======
 from myHTMLParser import parser
 
 def main():
@@ -16,4 +10,3 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> temp
