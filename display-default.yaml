@@ -1,0 +1,118 @@
+# Link: https://github.com/mozilla-firefox/firefox/blob/main/layout/style/res/html.css */
+# pseudo-selectors aren't included yet
+
+# blocks
+
+block:
+  article,
+  aside,
+  details,
+  div,
+  dt,
+  figcaption,
+  footer,
+  form,
+  header,
+  hgroup,
+  html,
+  main,
+  nav,
+  search,
+  section,
+  summary
+  body
+  p,
+  dl
+  dd
+  blockquote,
+  figure
+  address
+  center
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+  listing,
+  xmp,
+  pre,
+  plaintext
+  ul,
+  menu,
+  dir
+  ol
+  hr
+  frameset
+  dialog
+
+#tables
+
+table:
+  table 
+
+table-caption:
+  caption
+
+table-row:
+  tr
+
+table-col:
+  col
+
+table-column-group:
+  colgroup
+
+table-row-group:
+  tbody
+
+table-header-group:
+  thead
+
+table-footer-group:
+  tfoot
+
+table-cell:
+  td
+  th
+
+list-item:
+  li
+
+
+# none
+
+none:
+  base,
+  basefont,
+  datalist,
+  head,
+  link,
+  meta,
+  noembed,
+  noframes,
+  param,
+  rp,
+  script,
+  style,
+  template,
+  title 
+  area
+
+inline-block:
+  marquee
+
+ruby:
+  ruby
+
+ruby-base:
+  rb
+
+ruby-text:
+  rt
+  
+ruby-text-container:
+  rtc
+
+contents:
+  slot
