@@ -4,27 +4,27 @@
 # blocks
 
 block:
-  article,
-  aside,
-  details,
-  div,
-  dt,
-  figcaption,
-  footer,
-  form,
-  header,
-  hgroup,
-  html,
-  main,
-  nav,
-  search,
-  section,
+  article
+  aside
+  details
+  div
+  dt
+  figcaption
+  footer
+  form
+  header
+  hgroup
+  html
+  main
+  nav
+  search
+  section
   summary
   body
-  p,
+  p
   dl
   dd
-  blockquote,
+  blockquote
   figure
   address
   center
@@ -34,12 +34,12 @@ block:
   h4
   h5
   h6
-  listing,
-  xmp,
-  pre,
+  listing
+  xmp
+  pre
   plaintext
-  ul,
-  menu,
+  ul
+  menu
   dir
   ol
   hr
@@ -83,19 +83,19 @@ list-item:
 # none
 
 none:
-  base,
-  basefont,
-  datalist,
-  head,
-  link,
-  meta,
-  noembed,
-  noframes,
-  param,
-  rp,
-  script,
-  style,
-  template,
+  base
+  basefont
+  datalist
+  head
+  link
+  meta
+  noembed
+  noframes
+  param
+  rp
+  script
+  style
+  template
   title 
   area
 
