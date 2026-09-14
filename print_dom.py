@@ -3,7 +3,6 @@ import xml.dom.minidom as minidom
 def print_dom(node, depth=0):
     """Print a minidom DOM as an indented tree."""
     prefix = ("   " * depth + "|__") if depth else ""
-
     if node.nodeType == minidom.Node.DOCUMENT_NODE:
         if node.documentElement is not None:
             print_dom(node.documentElement, depth)

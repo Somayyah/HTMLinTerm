@@ -1,14 +1,15 @@
-class ElementNode:
-    """A representation of the HTML element"""
+from xml.dom.minidom import Element, Document, Text
+
+class ReprElement(Element):
+    def __init__(self, tagName, namespaceURI = None, prefix = None, localName = None):
+        super().__init__(tagName, namespaceURI, prefix, localName)
+
+class ReprDocument(Document):
     def __init__(self):
-        pass
+        super().__init__()
 
-    def __repr__(self):
-        pass
-
-class TextNode:
+class ReprText(Text):
     def __init__(self):
-        pass
+        super().__init__()
 
-    def __repr__(self):
-            pass
+
