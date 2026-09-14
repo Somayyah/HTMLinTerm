@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 from domTree import Stack, Element, DOMTree
+import sys
 
 class MyHTMLParser(HTMLParser):
 
@@ -16,19 +17,18 @@ class MyHTMLParser(HTMLParser):
             self.stack.top.next.add_child(node)
         else:
             self.domTree = node
-        if self.is_void_element(tag):
-            self.handle_endtag(tag)
 
     def handle_endtag(self, tag):
-        if tag != "html":
-            self.domTree = self.stack.top.next
-        else:
-            self.domTree = self.stack.top
-        self.stack.pop()
+        if not self.stack.is_empty():
+            self.stack.pop()
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag=tag, attrs=attrs)
+        self.handle_endtag(tag=tag)
 
     def handle_data(self, data):
         if not self.stack.is_empty():
-            self.stack.top.root.data = data
+            self.stack.top.root.data += data
 
     def handle_comment(self, data):
         """print("Comment  :", data)"""
@@ -53,3 +53,6 @@ class MyHTMLParser(HTMLParser):
     
     def getDOMTree(self):
         return self.domTree
+
+    def getStackLen(self):
+        return self.stack.size != 0

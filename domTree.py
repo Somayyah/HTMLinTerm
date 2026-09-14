@@ -45,7 +45,7 @@ class Stack:
         return self.top is None
 
 def is_there_whitespace(str):
-    return str.isspace() or str == ''
+    return str.isspace() or str == '' or str == "\n"
 
 class DOMTree:
     def __init__(self, root=None):
@@ -60,10 +60,7 @@ class DOMTree:
     def print_tree(self):
         spaces = ' ' * self.get_level() * 3
         prefix = spaces + "|__" if self.parent else ""
-        data_str = f", Data: {self.root.data}" if (
-            not (self.root.data.isspace() 
-                 or self.root.data == ''
-            )) else ""
+        data_str = f", Data: {self.root.data}" if not is_there_whitespace(self.root.data) and self.root.tag not in ["script", "style", "img"] else ""
         print(prefix + self.root.tag + data_str)
         if self.children:
             for child in self.children:
